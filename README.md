@@ -159,5 +159,5 @@ The script performs the following actions (the sourcecode contains comments to i
 
 ## 5. Instruction list
 1. Extract the content of "getdata-projectfiles-UCI HAR Dataset.zip" to the folder were the script is located.
-2. Load and run the script "run_analysis()" in R.
+2. Load and run the script "run_analysis.R" in R.
 
