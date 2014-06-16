@@ -43,9 +43,13 @@ This file contains:
 
 ## 2. Tidy data variables
 
-[List Variables]
+* subjectid:  Subject ID of the 30 volunteers.
+* activitylabel: Label describing the activity performed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).
+* features:
+[List features]
 
-### Variables names clarifications
+
+### Variables names clarifications for features
 * mean: denotes Mean value
 * std: denotes Standard deviation
 * prefix 't': denotes time domain signals.
@@ -72,14 +76,14 @@ Input for the script is the features vector. The raw signals (accelerometer and 
 
 
 ## 4. Study Design
-The script performs the following actions:
+The script performs the following actions (the sourcecode contains comments to identify where these actions are performed):
 
 1. Associates the activity id and subjects id to the feature vectors for the training set.
 2. Associates the activity id and subjects id to the feature vectors for the test set.
 3. Merges the two sets (appends test set after training set).
 4. Filters the merged set to only extract features based on mean and standard deviation of the measurements.
 5. Replaces the activity id with the more descriptive activity labels.
-6. Cleans up the names of the features (removes underscores, dots, capital letters, etc).
+6. Cleans up the names of the features (removes underscores, dots, capital letters, symbols, etc).
 7. Stores this tidy data set in a .csv file.
 8. Averages every feature for each activity type and subject.
 9. Stores a secodn tidy data ser in a .csv file containing the calculated averages.
