@@ -38,8 +38,7 @@ This file contains:
 
 ## 1. Tidy data sets
 
-1. filename.cvs: Tidy data containing mean and standard deviation of the measurements
-2. filename2.cvs: Tidy data containing the average of each variable for each activity and each subject.
+1. tidy_data.cvs: Tidy data containing the average of each variable (mean or std of the measurements) for each activity and each subject.
 
 ## 2. Tidy data variables
 
@@ -73,6 +72,8 @@ Input for the script is the features vector. The raw signals (accelerometer and 
 * Test features vector:  'test/X_test.txt':   Test set.
 * Test labels:           'test/y_train.txt':  Test labels.
 * Test subjects:         'test/subject_train.txt': Test subjects.
+* Features:              'features.txt'.
+* Activity Labels:       'activity_labels.txt'.
 
 
 ## 4. Study Design
@@ -84,9 +85,8 @@ The script performs the following actions (the sourcecode contains comments to i
 4. Filters the merged set to only extract features based on mean and standard deviation of the measurements.
 5. Replaces the activity id with the more descriptive activity labels.
 6. Cleans up the names of the features (removes underscores, dots, capital letters, symbols, etc).
-7. Stores this tidy data set in a .csv file.
 8. Averages every feature for each activity type and subject.
-9. Stores a secodn tidy data ser in a .csv file containing the calculated averages.
+9. Stores the tidy data set in a .csv file containing the calculated averages.
 
 
 ## 5. Instruction list
