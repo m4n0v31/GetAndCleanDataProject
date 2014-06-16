@@ -38,15 +38,81 @@ This file contains:
 
 ## 1. Tidy data sets
 
-1. tidy_data.cvs: Tidy data containing the average of each variable (mean or std of the measurements) for each activity and each subject.
+1. Tidy_data.cvs: Tidy data containing the average of each variable (mean or std of the measurements) for each activity and each subject.
 
 ## 2. Tidy data variables
 
 * subjectid:  Subject ID of the 30 volunteers.
 * activitylabel: Label describing the activity performed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).
-* features:
-[List features]
-
+* features (for convenience dots added, see next subsection for explanation):
+```
+     "tbodyaccmeanx":            "t.body.acc.mean.x"             
+     "tbodyaccmeany":            "t.body.acc.mean.y"             
+     "tbodyaccmeanz":            "t.body.acc.mean.z"             
+     "tbodyaccstdx":             "t.body.acc.std.x"              
+     "tbodyaccstdy":             "t.body.acc.std.y"              
+     "tbodyaccstdz":             "t.body.acc.std.z"              
+     "tgravityaccmeanx":         "t.gravity.acc.mean.x"          
+     "tgravityaccmeany":         "t.gravity.acc.mean.y"          
+     "tgravityaccmeanz":         "t.gravity.acc.mean.z"          
+     "tgravityaccstdx":          "t.gravity.acc.std.x"           
+     "tgravityaccstdy":          "t.gravity.acc.std.y"           
+     "tgravityaccstdz":          "t.gravity.acc.std.z"           
+     "tbodyaccjerkmeanx":        "t.body.acc.jerk.mean.x"        
+     "tbodyaccjerkmeany":        "t.body.acc.jerk.mean.y"        
+     "tbodyaccjerkmeanz":        "t.body.acc.jerk.mean.z"        
+     "tbodyaccjerkstdx":         "t.body.acc.jerk.std.x"         
+     "tbodyaccjerkstdy":         "t.body.acc.jerk.std.y"         
+     "tbodyaccjerkstdz":         "t.body.acc.jerk.std.z"         
+     "tbodygyromeanx":           "t.body.gyro.mean.x"            
+     "tbodygyromeany":           "t.body.gyro.mean.y"            
+     "tbodygyromeanz":           "t.body.gyro.mean.z"            
+     "tbodygyrostdx":            "t.body.gyro.std.x"             
+     "tbodygyrostdy":            "t.body.gyro.std.y"             
+     "tbodygyrostdz":            "t.body.gyro.std.z"             
+     "tbodygyrojerkmeanx":       "t.body.gyro.jerk.mean.x"       
+     "tbodygyrojerkmeany":       "t.body.gyro.jerk.mean.y"       
+     "tbodygyrojerkmeanz":       "t.body.gyro.jerk.mean.z"       
+     "tbodygyrojerkstdx":        "t.body.gyro.jerk.std.x"        
+     "tbodygyrojerkstdy":        "t.body.gyro.jerk.std.y"        
+     "tbodygyrojerkstdz":        "t.body.gyro.jerk.std.z"        
+     "tbodyaccmagmean":          "t.body.acc.mag.mean"           
+     "tbodyaccmagstd":           "t.body.acc.mag.std"            
+     "tgravityaccmagmean":       "t.gravity.acc.mag.mean"        
+     "tgravityaccmagstd":        "t.gravity.acc.mag.std"         
+     "tbodyaccjerkmagmean":      "t.body.acc.jerk.mag.mean"      
+     "tbodyaccjerkmagstd":       "t.body.acc.jerk.mag.std"       
+     "tbodygyromagmean":         "t.body.gyro.mag.mean"          
+     "tbodygyromagstd":          "t.body.gyro.mag.std"           
+     "tbodygyrojerkmagmean":     "t.body.gyro.jerk.mag.mean"     
+     "tbodygyrojerkmagstd":      "t.body.gyro.jerk.mag.std"      
+     "fbodyaccmeanx":            "f.body.acc.mean.x"             
+     "fbodyaccmeany":            "f.body.acc.mean.y"             
+     "fbodyaccmeanz":            "f.body.acc.mean.z"             
+     "fbodyaccstdx":             "f.body.acc.std.x"              
+     "fbodyaccstdy":             "f.body.acc.std.y"              
+     "fbodyaccstdz":             "f.body.acc.std.z"              
+     "fbodyaccjerkmeanx":        "f.body.acc.jerk.mean.x"        
+     "fbodyaccjerkmeany":        "f.body.acc.jerk.mean.y"        
+     "fbodyaccjerkmeanz":        "f.body.acc.jerk.mean.z"        
+     "fbodyaccjerkstdx":         "f.body.acc.jerk.std.x"         
+     "fbodyaccjerkstdy":         "f.body.acc.jerk.std.y"         
+     "fbodyaccjerkstdz":         "f.body.acc.jerk.std.z"         
+     "fbodygyromeanx":           "f.body.gyro.mean.x"            
+     "fbodygyromeany":           "f.body.gyro.mean.y"            
+     "fbodygyromeanz":           "f.body.gyro.mean.z"            
+     "fbodygyrostdx":            "f.body.gyro.std.x"             
+     "fbodygyrostdy":            "f.body.gyro.std.y"             
+     "fbodygyrostdz":            "f.body.gyro.std.z"             
+     "fbodyaccmagmean":          "f.body.acc.mag.mean"           
+     "fbodyaccmagstd":           "f.body.acc.mag.std"            
+     "fbodybodyaccjerkmagmean":  "f.body.body.acc.jerk.mag.mean" 
+     "fbodybodyaccjerkmagstd":   "f.body.body.acc.jerk.mag.std"  
+     "fbodybodygyromagmean":     "f.body.body.gyro.mag.mean"     
+     "fbodybodygyromagstd":      "f.body.body.gyro.mag.std"      
+     "fbodybodygyrojerkmagmean": "f.body.body.gyro.jerk.mag.mean"
+     "fbodybodygyrojerkmagstd":  "f.body.body.gyro.jerk.mag.std" 
+```
 
 ### Variables names clarifications for features
 * mean: denotes Mean value
@@ -79,17 +145,19 @@ Input for the script is the features vector. The raw signals (accelerometer and 
 ## 4. Study Design
 The script performs the following actions (the sourcecode contains comments to identify where these actions are performed):
 
-1. Associates the activity id and subjects id to the feature vectors for the training set.
-2. Associates the activity id and subjects id to the feature vectors for the test set.
-3. Merges the two sets (appends test set after training set).
-4. Filters the merged set to only extract features based on mean and standard deviation of the measurements.
-5. Replaces the activity id with the more descriptive activity labels.
-6. Cleans up the names of the features (removes underscores, dots, capital letters, symbols, etc).
-8. Averages every feature for each activity type and subject.
-9. Stores the tidy data set in a .csv file containing the calculated averages.
+1. Read activity id and labels
+2. Read features id and labels
+3. Associates the subject id and activity id to the feature vectors for the training set.
+4. Associates the subject id and activity id to the feature vectors for the test set.
+5. Merges the two sets (appends test set after training set).
+6. Filters the merged set to only extract features based on mean and standard deviation of the measurements.
+7. Replaces the activity id with the more descriptive activity labels.
+8. Cleans up the names of the features (removes underscores, dots, capital letters, symbols, etc).
+9. Averages every feature for each activity type and subject.
+10. Stores the tidy data set in a .csv file containing the calculated averages.
 
 
 ## 5. Instruction list
 1. Extract the content of "getdata-projectfiles-UCI HAR Dataset.zip" to the folder were the script is located.
-2. Load and run the script in R.
+2. Load and run the script "run_analysis()" in R.
 
