@@ -62,6 +62,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 ### Input Data
 Input for the script is the features vector. The raw signals (accelerometer and gyroscope) are not used because already elaborated and accounted when the features vector was created. Used files:
+
 * Train features vector: 'train/X_train.txt': Training set.
 * Train labels:          'train/y_train.txt': Training labels.
 * Train subjects:        'train/subject_train.txt': Training subjects.
@@ -72,6 +73,7 @@ Input for the script is the features vector. The raw signals (accelerometer and 
 
 ## 4. Study Design
 The script performs the following actions:
+
 1. Associates the activity id and subjects id to the feature vectors for the training set.
 2. Associates the activity id and subjects id to the feature vectors for the test set.
 3. Merges the two sets (appends test set after training set).
@@ -81,6 +83,7 @@ The script performs the following actions:
 7. Stores this tidy data set in a .csv file.
 8. Averages every feature for each activity type and subject.
 9. Stores a secodn tidy data ser in a .csv file containing the calculated averages.
+
 
 ## 5. Instruction list
 1. Extract the content of "getdata-projectfiles-UCI HAR Dataset.zip" to the folder were the script is located.
